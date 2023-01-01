@@ -26,7 +26,7 @@ def get_temp():
         weather_label["text"] = "Invalid City Name"
         return
 
-    # Get current weather data for Grosse Pointe Woods from openweathermap.ord
+    # Get current weather data for custom location from openweathermap.org
     weather = requests.get(f"https://api.openweathermap.org/data/2.5/"
                            f"onecall?lat={lat}&lon={lon}&exclude=minutely&units=imperial"
                            f"&appid={os.environ.get('WeatherAPIToken')}").text
